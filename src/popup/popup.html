@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nepali Date Converter</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Nepali Date Converter</h1>
+        <p>Converts offline</p>
+      </header>
+
+      <article>
+        <section>
+          <h2>AD to BS</h2>
+          <form id="adToBsForm">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="adYear">Year</label>
+                <select id="adYear" required></select>
+              </div>
+              <div class="form-field">
+                <label for="adMonth">Month</label>
+                <select id="adMonth" required>
+                  <option value="1">January</option>
+                  <option value="2">February</option>
+                  <option value="3">March</option>
+                  <option value="4">April</option>
+                  <option value="5">May</option>
+                  <option value="6">June</option>
+                  <option value="7">July</option>
+                  <option value="8">August</option>
+                  <option value="9">September</option>
+                  <option value="10">October</option>
+                  <option value="11">November</option>
+                  <option value="12">December</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="adDay">Day</label>
+                <select id="adDay" required></select>
+              </div>
+            </div>
+            <button type="submit" id="adToBsBtn">Convert to BS</button>
+          </form>
+        </section>
+
+        <section>
+          <h2>BS to AD</h2>
+          <form id="bsToAdForm">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="bsYear">Year</label>
+                <select id="bsYear" required></select>
+              </div>
+              <div class="form-field">
+                <label for="bsMonth">Month</label>
+                <select id="bsMonth" required>
+                  <option value="1">Baishakh</option>
+                  <option value="2">Jestha</option>
+                  <option value="3">Ashadh</option>
+                  <option value="4">Shrawan</option>
+                  <option value="5">Bhadra</option>
+                  <option value="6">Ashwin</option>
+                  <option value="7">Kartik</option>
+                  <option value="8">Mangsir</option>
+                  <option value="9">Poush</option>
+                  <option value="10">Magh</option>
+                  <option value="11">Falgun</option>
+                  <option value="12">Chaitra</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="bsDay">Day</label>
+                <select id="bsDay" required></select>
+              </div>
+            </div>
+            <button type="submit" id="bsToAdBtn">Convert to AD</button>
+          </form>
+        </section>
+
+        <section class="result-section" id="resultSection">
+          <output>Select a date and convert!</output>
+        </section>
+      </article>
+
+      <footer>
+        <p>
+          <a href="https://manishmajhi.com.np" target="_blank">Manish Majhi</a>
+          x <a href="https://claude.ai" target="_blank">Claude Sonnet</a>
+        </p>
+      </footer>
+    </main>
+
+    <script src="../lib/calendar-data.js"></script>
+    <script src="../lib/bs-calendar.js"></script>
+    <script src="../lib/popup-model.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
